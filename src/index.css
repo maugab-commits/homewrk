@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html, body {
+    background-color: #efede8;
+    color: #1c1b18;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, textarea.font-mono, input.font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Minimalist Skeuomorphic Tactile Surfaces (Dieter Rams / Architectural Drafting Studio) */
+.skeuo-chassis {
+  background: linear-gradient(180deg, #faf9f5 0%, #f1efe9 100%);
+  border: 1px solid #d4d0c5;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 8px 24px -10px rgba(28, 27, 24, 0.08),
+    0 1px 2px rgba(28, 27, 24, 0.05);
+}
+
+.skeuo-well {
+  background: #e8e5dc;
+  border: 1px solid #cfcabd;
+  box-shadow:
+    inset 0 2px 5px rgba(28, 27, 24, 0.09),
+    0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.skeuo-keycap {
+  background: linear-gradient(180deg, #ffffff 0%, #f2f0ea 100%);
+  border: 1px solid #ccc7ba;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 2px 0 #c5c0b3,
+    0 3px 5px rgba(28, 27, 24, 0.07);
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 120ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skeuo-keycap:hover:not(:disabled) {
+  background: linear-gradient(180deg, #ffffff 0%, #f6f4ef 100%);
+}
+
+.skeuo-keycap:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 1px 0 #c5c0b3;
+}
+
+.skeuo-keycap-accent {
+  background: linear-gradient(180deg, #e25b34 0%, #cf4721 100%);
+  border: 1px solid #b53917;
+  color: #ffffff;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.3) inset,
+    0 2px 0 #972d10,
+    0 3px 6px rgba(207, 71, 33, 0.22);
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 120ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skeuo-keycap-accent:hover:not(:disabled) {
+  background: linear-gradient(180deg, #ea653e 0%, #d84d27 100%);
+}
+
+.skeuo-keycap-accent:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 1px 0 #972d10;
+}
+
+.skeuo-screen {
+  background: #1a1917;
+  border: 2px solid #2e2c28;
+  box-shadow:
+    inset 0 2px 12px rgba(0, 0, 0, 0.45),
+    0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.drafting-grid {
+  background-image:
+    linear-gradient(to right, rgba(28, 27, 24, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(28, 27, 24, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom minimalist scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(28, 27, 24, 0.18);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(28, 27, 24, 0.32);
+}

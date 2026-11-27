@@ -1,0 +1,6 @@
+{
+  "name": "homewrk",
+  "description": "Minimalist skeuomorphic Flash-style IDE disguised as a house with slide workspaces that compiles, runs, and exports FrontScript.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
